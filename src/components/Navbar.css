@@ -1,0 +1,81 @@
+.topbar{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    padding:20px 40px;
+
+    background:#0F172A;
+
+    color:white;
+
+    box-shadow:0 8px 25px rgba(0,0,0,.2);
+
+    margin-bottom:30px;
+
+}
+
+.logo{
+
+    display:flex;
+
+    align-items:center;
+
+    gap:15px;
+
+}
+
+.logo-icon{
+
+    width:60px;
+
+    height:60px;
+
+    border-radius:18px;
+
+    background:linear-gradient(135deg,#2563EB,#7C3AED);
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    font-size:30px;
+
+}
+
+.logo h1{
+
+    margin:0;
+
+    font-size:32px;
+
+    letter-spacing:2px;
+
+}
+
+.logo small{
+
+    color:#CBD5E1;
+
+}
+
+.profile{
+
+    text-align:right;
+
+}
+
+.welcome{
+
+    display:block;
+
+    color:#CBD5E1;
+
+    font-size:14px;
+
+}
