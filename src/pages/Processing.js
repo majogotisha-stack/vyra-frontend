@@ -14,10 +14,11 @@ const steps = [
 ];
 
 function Processing() {
+
   const navigate = useNavigate();
+
   const [currentStep, setCurrentStep] = useState(0);
 
-}
 
   useEffect(() => {
 
@@ -29,19 +30,24 @@ function Processing() {
 
       }, 900);
 
+
       return () => clearTimeout(timer);
 
     } else {
 
-      setTimeout(() => {
+      const timer = setTimeout(() => {
 
         navigate("/results");
 
       }, 1500);
 
+
+      return () => clearTimeout(timer);
+
     }
 
-  }, [currentStep, navigate, steps.length]);
+  }, [currentStep, navigate]);
+
 
   return (
 
@@ -50,34 +56,27 @@ function Processing() {
       <h1>VYRA AI Engine</h1>
 
       <p className="status">
-
         Your video is being analyzed...
-
       </p>
+
 
       {steps.map((step, index) => (
 
-        <div className="step" key={index}>
+        <div
+          className={
+            index <= currentStep
+              ? "step active"
+              : "step"
+          }
+          key={index}
+        >
 
-          {index < currentStep ? "✅ " : "⏳ "}
-
-          {step}
+          <span>{step}</span>
 
         </div>
 
       ))}
 
-      <br />
-
-      <h3>
-
-        {currentStep < steps.length
-
-          ? "Artificial Intelligence is processing..."
-
-          : "Analysis Complete ✔"}
-
-      </h3>
 
     </div>
 
