@@ -2,22 +2,22 @@ import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import "../Processing.css";
 
+const steps = [
+  "🎥 Extracting Video",
+  "🎙️ Extracting Audio",
+  "📝 Converting Speech to Text",
+  "🧠 Understanding Content",
+  "✨ Detecting Powerful Moments",
+  "✂️ Generating Short Clips",
+  "💬 Creating Captions",
+  "🏷️ Generating Titles & Hashtags"
+];
+
 function Processing() {
-
   const navigate = useNavigate();
-
-  const steps = [
-    "🎥 Extracting Video",
-    "🎙️ Extracting Audio",
-    "📝 Converting Speech to Text",
-    "🧠 Understanding Content",
-    "✨ Detecting Powerful Moments",
-    "✂️ Generating Short Clips",
-    "💬 Creating Captions",
-    "🏷️ Generating Titles & Hashtags"
-  ];
-
   const [currentStep, setCurrentStep] = useState(0);
+
+}
 
   useEffect(() => {
 
@@ -41,7 +41,7 @@ function Processing() {
 
     }
 
-  }, [currentStep, navigate]);
+  }, [currentStep, navigate, steps.length]);
 
   return (
 
