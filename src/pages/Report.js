@@ -21,7 +21,7 @@ function Report() {
         <p><strong>Filename:</strong> Sunday_Service.mp4</p>
         <p><strong>Duration:</strong> 52 Minutes</p>
         <p><strong>Language:</strong> English</p>
-        <p><strong>Speaker:</strong> Pastor T.</p>
+        <p><strong>Speaker:</strong> Prophet E. Nota.</p>
 
       </div>
 
